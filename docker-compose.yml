@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  netcup-ddns:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dynamic-dns-netcup:latest
+    container_name: netcup-ddns
+    restart: always
+    env_file:
+      - .env
